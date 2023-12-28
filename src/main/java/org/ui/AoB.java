@@ -22,6 +22,7 @@ public class AoB extends JFrame {
     private JLabel visual_legth;
     private JButton calculateButton;
     private JButton goBackButton;
+    private JCheckBox goingAwayCheckBox;
 
     /**
      * Constructor
@@ -55,7 +56,7 @@ public class AoB extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(AoB.this, WindowEvent.WINDOW_CLOSING));
-                new Answer(Calculations.AoB(visual_field.getText(), real_field.getText()));
+                new Answer(Calculations.AoB(visual_field.getText(), real_field.getText(), goingAwayCheckBox.isSelected()));
             }
         });
     }

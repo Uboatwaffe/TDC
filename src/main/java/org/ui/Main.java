@@ -93,10 +93,18 @@ public class Main extends JFrame {
         });
     }
 
+    /**
+     * Main function
+     *
+     * @param args arguments
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Main::new);
     }
 
+    /**
+     * Function that hides main menu
+     */
     void hideMain(){
         setVisible(false);
     }

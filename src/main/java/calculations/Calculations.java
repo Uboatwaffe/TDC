@@ -15,6 +15,14 @@ public class Calculations {
 
     }
 
+    /**
+     * Function that calculates distance to the target
+     *
+     * @param mast_height            height of the target
+     * @param height_in_milliradians height of the target in milliradians
+     * @param zoom                   used zoom
+     * @return distance to the target in meters
+     */
     public static String distance(String mast_height, String height_in_milliradians, int zoom) {
         double mast = Integer.parseInt(mast_height);
         double milliradians = Integer.parseInt(height_in_milliradians);
@@ -29,6 +37,13 @@ public class Calculations {
         return answer + " m";
     }
 
+    /**
+     * Function that calculates visual length of the target
+     * @param Distance distance to the target
+     * @param length_in_degrees length of the target in degrees (in periscope)
+     * @param zoom used zoom
+     * @return visual length of the target in meters
+     */
     public static String Length(String Distance, String length_in_degrees, int zoom) {
         double distance = Double.parseDouble(Distance);
         double length = Double.parseDouble(length_in_degrees);
@@ -43,9 +58,16 @@ public class Calculations {
 
         answer *= length;
 
-        return Double.toString(answer);
+        return answer + " m";
     }
 
+
+    /**
+     * Function that calculates speed of the target
+     * @param length_in_meters length of the target
+     * @param time_in_seconds how much time it took target to cross its length
+     * @return speed in knots
+     */
     public static String Speed(String length_in_meters, String time_in_seconds) {
         double length = Double.parseDouble(length_in_meters);
         double time = Double.parseDouble(time_in_seconds);
@@ -57,12 +79,26 @@ public class Calculations {
         return answer + " kn";
     }
 
-    public static String AoB(String visual_length, String real_length) {
+    /**
+     * Function that calculates AoB of the target
+     *
+     * @param visual_length visual length of the target (in meters)
+     * @param real_length   real length of the target (in meters)
+     * @param away          tells if target is going away or towards
+     * @return AoB to your boat in degrees
+     */
+    public static String AoB(String visual_length, String real_length, boolean away) {
         double visual = Double.parseDouble(visual_length);
         double real = Double.parseDouble(real_length);
 
         double pre = visual / real;
 
-        return Math.toDegrees(Math.asin(pre)) + " *";
+        double aob = Math.toDegrees(Math.asin(pre));
+
+        if (away) {
+            aob = 180 - aob;
+        }
+
+        return aob + " *";
     }
 }
