@@ -66,6 +66,18 @@ public class Main extends JFrame {
                 new Distance();
             }
         });
+        aoBButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                hideMain();
+                new AoB();
+            }
+        });
     }
 
     public static void main(String[] args) {
