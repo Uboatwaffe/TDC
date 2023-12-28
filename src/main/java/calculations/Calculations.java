@@ -47,8 +47,8 @@ public class Calculations {
     }
 
     public static String Speed(String length_in_meters, String time_in_seconds) {
-        double length = Integer.parseInt(length_in_meters);
-        double time = Integer.parseInt(time_in_seconds);
+        double length = Double.parseDouble(length_in_meters);
+        double time = Double.parseDouble(time_in_seconds);
 
         double answer = length / time;
 
