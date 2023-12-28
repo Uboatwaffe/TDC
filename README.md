@@ -2,10 +2,10 @@
 
 ## This program is used for calculating:
 
-- speed
-- distance
-- angle on bow
-- visual length
+- ### speed
+- ### distance
+- ### angle on bow
+- ### visual length
 
 ## It is designed to be used with UBOAT by Deep Water Studio
 
