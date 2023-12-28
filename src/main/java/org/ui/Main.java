@@ -21,6 +21,7 @@ public class Main extends JFrame {
     private JLabel welcome;
     private JLabel what_to_do;
     private JButton visualLengthButton;
+    private JButton fullProcedureButton;
 
     /**
      * Constructor
@@ -89,6 +90,18 @@ public class Main extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 hideMain();
                 new Length();
+            }
+        });
+        fullProcedureButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                hideMain();
+                new Full();
             }
         });
     }

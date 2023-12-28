@@ -24,8 +24,8 @@ public class Calculations {
      * @return distance to the target in meters
      */
     public static String distance(String mast_height, String height_in_milliradians, int zoom) {
-        double mast = Integer.parseInt(mast_height);
-        double milliradians = Integer.parseInt(height_in_milliradians);
+        double mast = Double.parseDouble(mast_height);
+        double milliradians = Double.parseDouble(height_in_milliradians);
 
         double answer = (mast * 1000) / milliradians;
 
@@ -34,7 +34,7 @@ public class Calculations {
             case 3 -> answer *= 4;
         }
 
-        return answer + " m";
+        return String.valueOf(answer);
     }
 
     /**
@@ -58,7 +58,7 @@ public class Calculations {
 
         answer *= length;
 
-        return answer + " m";
+        return String.valueOf(answer);
     }
 
 
@@ -76,7 +76,7 @@ public class Calculations {
 
         answer *= 1.943844;
 
-        return answer + " kn";
+        return String.valueOf(answer);
     }
 
     /**
@@ -99,6 +99,6 @@ public class Calculations {
             aob = 180 - aob;
         }
 
-        return aob + " *";
+        return String.valueOf(aob);
     }
 }
