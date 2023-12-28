@@ -9,6 +9,6 @@
 
 ## It is designed to be used with UBOAT by Deep Water Studio
 
-## Made in 2.5h by high school student on 28th of December for personal use
+## Made in 3h by high school student on 28th of December for personal use
 
 ## This isn't secure in any mean and won't be
