@@ -56,7 +56,7 @@ public class AoB extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(AoB.this, WindowEvent.WINDOW_CLOSING));
-                new Answer(Calculations.AoB(visual_field.getText(), real_field.getText(), goingAwayCheckBox.isSelected()));
+                new Answer(Calculations.AoB(visual_field.getText(), real_field.getText(), goingAwayCheckBox.isSelected()), "a");
             }
         });
     }

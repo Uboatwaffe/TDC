@@ -53,7 +53,7 @@ public class Speed extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Answer(Calculations.Speed(length_field.getText(), time_field.getText()));
+                new Answer(Calculations.Speed(length_field.getText(), time_field.getText()), "s");
                 dispatchEvent(new WindowEvent(Speed.this, WindowEvent.WINDOW_CLOSING));
             }
         });

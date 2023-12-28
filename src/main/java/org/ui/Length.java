@@ -56,7 +56,7 @@ public class Length extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(Length.this, WindowEvent.WINDOW_CLOSING));
-                new Answer(Calculations.Length(textField1.getText(), textField2.getText(), zoom_slider.getValue()));
+                new Answer(Calculations.Length(textField1.getText(), textField2.getText(), zoom_slider.getValue()), "d");
             }
         });
     }

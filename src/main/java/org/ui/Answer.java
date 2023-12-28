@@ -21,7 +21,7 @@ public class Answer extends JFrame {
     /**
      * Constructor
      */
-    Answer(String answer) {
+    Answer(String answer, String type) {
         setContentPane(panel);
         setTitle("TDC calculator");
         setSize(250, 170);
@@ -29,7 +29,12 @@ public class Answer extends JFrame {
         setResizable(false);
         setVisible(true);
 
-        this.answer.setText(answer);
+        switch (type) {
+            case "s" -> this.answer.setText(answer + " kn");
+            case "d" -> this.answer.setText(answer + " m");
+            case "a" -> this.answer.setText(answer + " °");
+        }
+
 
         closeButton.addActionListener(new ActionListener() {
             /**
