@@ -13,6 +13,7 @@ import java.awt.event.WindowEvent;
  * @author Maciek
  * @version 0.1
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class Distance extends JFrame {
 
     private JTextField textField1;

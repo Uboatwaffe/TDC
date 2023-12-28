@@ -9,13 +9,6 @@ package calculations;
 public class Calculations {
 
     /**
-     * Constructor
-     */
-    Calculations() {
-
-    }
-
-    /**
      * Function that calculates distance to the target
      *
      * @param mast_height            height of the target
