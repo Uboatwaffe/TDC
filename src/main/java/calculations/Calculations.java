@@ -26,7 +26,7 @@ public class Calculations {
             case 3 -> answer *= 4;
         }
 
-        return Double.toString(answer);
+        return answer + " m";
     }
 
     public static String Length(String Distance, String length_in_degrees, int zoom) {

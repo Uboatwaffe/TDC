@@ -1,5 +1,7 @@
 package org.ui;
 
+import calculations.Calculations;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,6 +45,18 @@ public class Distance extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(Distance.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
+            }
+        });
+        calculateButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Answer(Calculations.distance(textField1.getText(), textField2.getText(), zoom_slider.getValue()));
+                dispatchEvent(new WindowEvent(Distance.this, WindowEvent.WINDOW_CLOSING));
             }
         });
     }
