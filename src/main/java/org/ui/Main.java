@@ -54,6 +54,18 @@ public class Main extends JFrame {
                 new Speed();
             }
         });
+        distanceButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                hideMain();
+                new Distance();
+            }
+        });
     }
 
     public static void main(String[] args) {
