@@ -1,5 +1,7 @@
 package org.ui;
 
+import calculations.Calculations;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +43,18 @@ public class Speed extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(Speed.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
+            }
+        });
+        calculateButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Answer(Calculations.Speed(length_field.getText(), time_field.getText()));
+                dispatchEvent(new WindowEvent(Speed.this, WindowEvent.WINDOW_CLOSING));
             }
         });
     }

@@ -21,13 +21,15 @@ public class Answer extends JFrame {
     /**
      * Constructor
      */
-    Answer() {
+    Answer(String answer) {
         setContentPane(panel);
         setTitle("TDC calculator");
-        setSize(250, 125);
+        setSize(250, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setResizable(false);
         setVisible(true);
+
+        this.answer.setText(answer);
 
         closeButton.addActionListener(new ActionListener() {
             /**
@@ -38,6 +40,7 @@ public class Answer extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispatchEvent(new WindowEvent(Answer.this, WindowEvent.WINDOW_CLOSING));
+                new Main();
             }
         });
     }

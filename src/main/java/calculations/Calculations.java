@@ -52,9 +52,9 @@ public class Calculations {
 
         double answer = length / time;
 
-        answer *= 0.51444;
+        answer *= 1.943844;
 
-        return Double.toString(answer);
+        return answer + " kn";
     }
 
     public static String AoB(String visual_length, String real_length) {
