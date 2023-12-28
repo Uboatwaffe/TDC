@@ -11,31 +11,28 @@ import java.awt.event.WindowEvent;
  * @author Maciek
  * @version 0.1
  */
-public class Answer extends JFrame {
+public class Full_answer extends JFrame {
 
     private JPanel panel;
-    private JLabel welcome;
-    private JLabel answer;
     private JButton closeButton;
+    private JLabel distance;
+    private JLabel aob;
+    private JLabel speed;
 
     /**
      * Constructor
      */
-    Answer(String answer, String type) {
+    Full_answer(String distance, String speed, String aob) {
         setContentPane(panel);
         setTitle("TDC calculator");
-        setSize(250, 170);
+        setSize(530, 150);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setResizable(false);
         setVisible(true);
 
-        switch (type) {
-            case "s" -> this.answer.setText(answer + " kn");
-            case "d" -> this.answer.setText(answer + " m");
-            case "a" -> this.answer.setText(answer + " °");
-        }
-
-
+        this.distance.setText("Distance is equal to: " + distance + " m");
+        this.aob.setText("AoB is equal to: " + aob + " °");
+        this.speed.setText("Speed is equal to: " + speed + " kn");
         closeButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
@@ -44,7 +41,7 @@ public class Answer extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispatchEvent(new WindowEvent(Answer.this, WindowEvent.WINDOW_CLOSING));
+                dispatchEvent(new WindowEvent(Full_answer.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }
         });

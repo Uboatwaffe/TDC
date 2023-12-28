@@ -13,6 +13,7 @@ import java.awt.event.WindowEvent;
  * @author Maciek
  * @version 0.1
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class Distance extends JFrame {
 
     private JTextField textField1;
@@ -55,7 +56,7 @@ public class Distance extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Answer(Calculations.distance(textField1.getText(), textField2.getText(), zoom_slider.getValue()));
+                new Answer(Calculations.distance(textField1.getText(), textField2.getText(), zoom_slider.getValue()), "d");
                 dispatchEvent(new WindowEvent(Distance.this, WindowEvent.WINDOW_CLOSING));
             }
         });
