@@ -63,6 +63,6 @@ public class Calculations {
 
         double pre = visual / real;
 
-        return Double.toString(Math.toDegrees(Math.asin(pre)));
+        return Math.toDegrees(Math.asin(pre)) + " *";
     }
 }
