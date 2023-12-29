@@ -30,7 +30,7 @@
           <grid row="11" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Zoom (1 =&gt; 1.5x  ;  2 =&gt; 3x  ;  3 =&gt; 6x)"/>
+          <text value="Zoom (1 =&gt; 0.6x  ;  2 =&gt; 1.5x  ;  3 =&gt; 6x)"/>
         </properties>
       </component>
       <component id="4d92e" class="javax.swing.JSlider" binding="zoom_slider">

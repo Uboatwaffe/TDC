@@ -22,9 +22,8 @@ public class Calculations {
 
         double answer = (mast * 1000) / milliradians;
 
-        switch (zoom) {
-            case 2 -> answer *= 2;
-            case 3 -> answer *= 4;
+        if (zoom == 2) {
+            answer *= 4;
         }
 
         return String.valueOf(answer);
@@ -45,8 +44,7 @@ public class Calculations {
 
         switch (zoom) {
             case 1 -> answer = distance / 110;
-            case 2 -> answer = distance / 300;
-            case 3 -> answer = distance / 1100;
+            case 2 -> answer = distance / 1100;
         }
 
         answer *= length;
