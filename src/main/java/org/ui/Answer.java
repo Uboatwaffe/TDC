@@ -8,7 +8,7 @@ import java.awt.event.WindowEvent;
 /**
  * Created on 28.12.2023
  *
- * @author Maciek
+ * @author Maciej
  * @version 0.1
  */
 public class Answer extends JFrame {
@@ -44,6 +44,7 @@ public class Answer extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens main menu and closes this window
                 dispatchEvent(new WindowEvent(Answer.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }

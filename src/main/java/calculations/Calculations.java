@@ -3,8 +3,8 @@ package calculations;
 /**
  * Created on 28.12.2023
  *
- * @author Maciek
- * @version 0.1
+ * @author Maciej
+ * @version 4.0
  */
 public class Calculations {
 

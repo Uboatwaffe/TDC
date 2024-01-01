@@ -10,10 +10,9 @@ import java.awt.event.WindowEvent;
 /**
  * Created on 28.12.2023
  *
- * @author Maciek
+ * @author Maciej
  * @version 0.1
  */
-@SuppressWarnings("SpellCheckingInspection")
 public class Distance extends JFrame {
 
     private JTextField textField1;
@@ -21,7 +20,7 @@ public class Distance extends JFrame {
     private JTextField textField2;
     private JSlider zoom_slider;
     private JLabel zoom;
-    private JLabel miliradians;
+    private JLabel milliradians;
     private JPanel panel;
     private JButton calculateButton;
     private JButton goBackButton;
@@ -44,6 +43,7 @@ public class Distance extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens main menu and closes this window
                 dispatchEvent(new WindowEvent(Distance.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }
@@ -56,6 +56,7 @@ public class Distance extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens dialog with answer and closes this window
                 new Answer(Calculations.distance(textField1.getText(), textField2.getText(), zoom_slider.getValue()), "d");
                 dispatchEvent(new WindowEvent(Distance.this, WindowEvent.WINDOW_CLOSING));
             }

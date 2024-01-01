@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
 /**
  * Created on 28.12.2023
  *
- * @author Maciek
+ * @author Maciej
  * @version 0.1
  */
 public class AoB extends JFrame {
@@ -43,6 +43,7 @@ public class AoB extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens main menu and closes this window
                 dispatchEvent(new WindowEvent(AoB.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }
@@ -55,6 +56,7 @@ public class AoB extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens dialog with answer and closes this window
                 dispatchEvent(new WindowEvent(AoB.this, WindowEvent.WINDOW_CLOSING));
                 new Answer(Calculations.AoB(visual_field.getText(), real_field.getText(), goingAwayCheckBox.isSelected()), "a");
             }

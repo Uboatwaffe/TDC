@@ -40,6 +40,7 @@ public class Info extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens main menu and closes this window
                 dispatchEvent(new WindowEvent(Info.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }

@@ -41,6 +41,7 @@ public class Speed extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens main menu and closes this window
                 dispatchEvent(new WindowEvent(Speed.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }
@@ -53,6 +54,7 @@ public class Speed extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Opens dialog with answer and closes this window
                 new Answer(Calculations.Speed(length_field.getText(), time_field.getText()), "s");
                 dispatchEvent(new WindowEvent(Speed.this, WindowEvent.WINDOW_CLOSING));
             }
