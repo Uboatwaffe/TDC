@@ -19,7 +19,7 @@ public class AoB extends JFrame {
     private JTextField visual_field;
     private JTextField real_field;
     private JLabel real_length;
-    private JLabel visual_legth;
+    private JLabel visual_length;
     private JButton calculateButton;
     private JButton goBackButton;
     private JCheckBox goingAwayCheckBox;
