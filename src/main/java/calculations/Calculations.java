@@ -4,7 +4,7 @@ package calculations;
  * Created on 28.12.2023
  *
  * @author Maciej
- * @version 4.0
+ * @version 4.1
  */
 public class Calculations {
 
@@ -17,16 +17,20 @@ public class Calculations {
      * @return distance to the target in meters
      */
     public static String distance(String mast_height, String height_in_milliradians, int zoom) {
-        double mast = Double.parseDouble(mast_height);
-        double milliradians = Double.parseDouble(height_in_milliradians);
+        try {
+            double mast = Double.parseDouble(mast_height);
+            double milliradians = Double.parseDouble(height_in_milliradians);
 
-        double answer = (mast * 1000) / milliradians;
+            double answer = (mast * 1000) / milliradians;
 
-        if (zoom == 2) {
-            answer *= 4;
+            if (zoom == 2) {
+                answer *= 4;
+            }
+            return String.valueOf(answer);
+        } catch (NumberFormatException e) {
+            return null;
         }
 
-        return String.valueOf(answer);
     }
 
     /**
@@ -37,14 +41,18 @@ public class Calculations {
      * @return visual length of the target in meters
      */
     public static String Length(String Distance, String length_in_degrees, int zoom) {
-        double distance = Double.parseDouble(Distance);
-        double length = Double.parseDouble(length_in_degrees);
+        try {
+            double distance = Double.parseDouble(Distance);
+            double length = Double.parseDouble(length_in_degrees);
 
-        if (zoom == 2) length /= 4;
+            if (zoom == 2) length /= 4;
 
-        double answer = distance * Math.tan(Math.toRadians((length * 100) / 105));
+            double answer = distance * Math.tan(Math.toRadians((length * 100) / 105));
 
-        return String.valueOf(answer);
+            return String.valueOf(answer);
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
 
@@ -55,14 +63,18 @@ public class Calculations {
      * @return speed in knots
      */
     public static String Speed(String length_in_meters, String time_in_seconds) {
-        double length = Double.parseDouble(length_in_meters);
-        double time = Double.parseDouble(time_in_seconds);
+        try {
+            double length = Double.parseDouble(length_in_meters);
+            double time = Double.parseDouble(time_in_seconds);
 
-        double answer = length / time;
+            double answer = length / time;
 
-        answer *= 1.943844;
+            answer *= 1.943844;
 
-        return String.valueOf(answer);
+            return String.valueOf(answer);
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
     /**
@@ -74,17 +86,21 @@ public class Calculations {
      * @return AoB to your boat in degrees
      */
     public static String AoB(String visual_length, String real_length, boolean away) {
-        double visual = Double.parseDouble(visual_length);
-        double real = Double.parseDouble(real_length);
+        try {
+            double visual = Double.parseDouble(visual_length);
+            double real = Double.parseDouble(real_length);
 
-        double pre = visual / real;
+            double pre = visual / real;
 
-        double aob = Math.toDegrees(Math.asin(pre));
+            double aob = Math.toDegrees(Math.asin(pre));
 
-        if (away) {
-            aob = 180 - aob;
+            if (away) {
+                aob = 180 - aob;
+            }
+
+            return String.valueOf(aob);
+        } catch (NumberFormatException e) {
+            return null;
         }
-
-        return String.valueOf(aob);
     }
 }

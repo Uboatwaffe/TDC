@@ -6,40 +6,31 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * Created on 28.12.2023
+ * Created on 01.01.2024
  *
  * @author Maciej
  * @version 0.1
  */
-public class Answer extends JFrame {
+public class WrongFormat extends JFrame {
 
     private JPanel panel;
-    private JLabel welcome;
-    private JLabel answer;
     private JButton closeButton;
+    private JLabel info;
+    private JLabel info2;
+    private JLabel info3;
+    private JLabel info4;
+    private JLabel reasons;
 
     /**
      * Constructor
      */
-    Answer(String answer, String type) {
+    WrongFormat() {
         setContentPane(panel);
         setTitle("TDC calculator");
-        setSize(250, 170);
+        setSize(400, 230);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setResizable(false);
         setVisible(true);
-
-        if (answer != null) {
-            switch (type) {
-                case "s" -> this.answer.setText(answer + " kn");
-                case "d" -> this.answer.setText(answer + " m");
-                case "a" -> this.answer.setText(answer + " °");
-            }
-        } else {
-            new WrongFormat();
-            dispatchEvent(new WindowEvent(Answer.this, WindowEvent.WINDOW_CLOSING));
-        }
-
 
         closeButton.addActionListener(new ActionListener() {
             /**
@@ -50,7 +41,7 @@ public class Answer extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Opens main menu and closes this window
-                dispatchEvent(new WindowEvent(Answer.this, WindowEvent.WINDOW_CLOSING));
+                dispatchEvent(new WindowEvent(WrongFormat.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }
         });
