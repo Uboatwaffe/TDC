@@ -40,14 +40,7 @@ public class Calculations {
         double distance = Double.parseDouble(Distance);
         double length = Double.parseDouble(length_in_degrees);
 
-        double answer = 0;
-
-        switch (zoom) {
-            case 1 -> answer = distance / 110;
-            case 2 -> answer = distance / 1100;
-        }
-
-        answer *= length;
+        double answer = distance * Math.tan(Math.toRadians((length * 100) / 105));
 
         return String.valueOf(answer);
     }
