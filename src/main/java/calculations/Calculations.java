@@ -40,9 +40,9 @@ public class Calculations {
         double distance = Double.parseDouble(Distance);
         double length = Double.parseDouble(length_in_degrees);
 
-        double answer = distance * Math.tan(Math.toRadians((length * 100) / 105));
+        if (zoom == 2) length /= 4;
 
-        if (zoom == 2) answer *= 4;
+        double answer = distance * Math.tan(Math.toRadians((length * 100) / 105));
 
         return String.valueOf(answer);
     }
