@@ -7,8 +7,12 @@
 - ### angle on bow
 - ### visual length
 
-## It is designed to be used with UBOAT by Deep Water Studio
+## Requirements:
 
-## Made in 3h by high school student on 28th of December for personal use
+- ### HARDscope
+- ### Realistic periscope magnification
+- ### Uboat by Deep Water Studio
+
+## All formulas are from [this](http://www.tvre.org/en/) website, mod descriptions, forums and mine algebra
 
 ## This isn't secure in any mean and won't be
