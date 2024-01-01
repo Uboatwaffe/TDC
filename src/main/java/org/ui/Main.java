@@ -7,9 +7,9 @@ import java.awt.event.WindowEvent;
 
 /**
  * Created on 28.12.2023
- *
+ * This is final version
  * @author Maciek
- * @version 0.1
+ * @version 1.0
  */
 public class Main extends JFrame {
 
