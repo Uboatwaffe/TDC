@@ -69,7 +69,7 @@ public class Calculations {
 
             double answer = length / time;
 
-            answer *= 1.943844;
+            answer *= 1.94384449412;
 
             return String.valueOf(answer);
         } catch (NumberFormatException e) {
