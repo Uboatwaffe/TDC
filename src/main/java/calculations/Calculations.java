@@ -42,6 +42,8 @@ public class Calculations {
 
         double answer = distance * Math.tan(Math.toRadians((length * 100) / 105));
 
+        if (zoom == 2) answer *= 4;
+
         return String.valueOf(answer);
     }
 

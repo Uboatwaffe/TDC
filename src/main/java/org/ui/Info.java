@@ -6,33 +6,32 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * Created on 28.12.2023
+ * Created on 01.01.2024
  *
- * @author Maciek
+ * @author Maciej
  * @version 0.1
  */
-public class Full_answer extends JFrame {
+public class Info extends JFrame {
 
     private JPanel panel;
+    private JLabel welcome;
+    private JLabel one;
+    private JLabel two;
+    private JLabel three;
+    private JLabel four;
+    private JLabel five;
     private JButton closeButton;
-    private JLabel distance;
-    private JLabel aob;
-    private JLabel speed;
 
     /**
      * Constructor
      */
-    Full_answer(String distance, String speed, String aob) {
+    Info() {
         setContentPane(panel);
         setTitle("TDC calculator");
-        setSize(530, 150);
+        setSize(650, 250);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setResizable(false);
         setVisible(true);
-
-        this.distance.setText("Distance is equal to: " + distance + " m");
-        this.aob.setText("AoB is equal to: " + aob + " °");
-        this.speed.setText("Speed is equal to: " + speed + " kn");
         closeButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
@@ -41,7 +40,7 @@ public class Full_answer extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispatchEvent(new WindowEvent(Full_answer.this, WindowEvent.WINDOW_CLOSING));
+                dispatchEvent(new WindowEvent(Info.this, WindowEvent.WINDOW_CLOSING));
                 new Main();
             }
         });

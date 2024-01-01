@@ -101,7 +101,7 @@ public class Main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 hideMain();
-                new Full();
+                new Info();
             }
         });
     }
