@@ -21,6 +21,9 @@ public class Info extends JFrame {
     private JLabel four;
     private JLabel five;
     private JButton closeButton;
+    private JLabel seven;
+    private JLabel six;
+    private JLabel eight;
 
     /**
      * Constructor
@@ -28,7 +31,7 @@ public class Info extends JFrame {
     Info() {
         setContentPane(panel);
         setTitle("TDC calculator");
-        setSize(650, 250);
+        setSize(650, 300);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setResizable(false);
         setVisible(true);
